@@ -33,6 +33,9 @@ public class Patient {
     @Column(name="symptom3")
     int mainSymptomId3;
 
+    @Column(name="gender")
+    int gender; //1 for male,  2 female
+
 
     public Patient(String first, String last, int pulse, ArrayList<Symptom> main , int sym1 , int sym2, int sym3){
         this.firstName =first;
