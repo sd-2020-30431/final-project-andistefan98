@@ -1,4 +1,4 @@
-package com.assesment.assesmentsystem.entities;
+package com.assesment.assesmentsystem.data.entities;
 
 import lombok.Data;
 
@@ -11,7 +11,6 @@ public class Doctor {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name="id")
     int id;
 
     @Column(name="name")
@@ -23,7 +22,7 @@ public class Doctor {
     @Column(name="endWorkHour")
    int endWorkHour;
 
-    @Column(name="departmentId")
+
     int departmentId ;
 
     public Doctor(String name, int startWorkHour, int endWorkHour, int departmentId) {
@@ -32,6 +31,8 @@ public class Doctor {
         this.endWorkHour = endWorkHour;
         this.departmentId = departmentId;
     }
+
+
 
     public int getId() {
         return id;

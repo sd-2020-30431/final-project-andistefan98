@@ -1,9 +1,9 @@
 package com.assesment.assesmentsystem.bussines;
 
-import com.assesment.assesmentsystem.entities.Department;
-import com.assesment.assesmentsystem.entities.Disease;
+import com.assesment.assesmentsystem.data.entities.Department;
+import com.assesment.assesmentsystem.data.entities.Disease;
 import org.springframework.beans.factory.annotation.Autowired;
-import com.assesment.assesmentsystem.repositories.DepartmentRepository;
+import com.assesment.assesmentsystem.data.repositories.DepartmentRepository;
 
 import java.util.ArrayList;
 import java.util.HashMap;

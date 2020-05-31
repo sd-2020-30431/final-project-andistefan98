@@ -1,7 +1,6 @@
-package com.assesment.assesmentsystem.repositories;
+package com.assesment.assesmentsystem.data.repositories;
 
-import com.assesment.assesmentsystem.entities.Doctor;
-import org.springframework.data.jpa.repository.JpaRepository;
+import com.assesment.assesmentsystem.data.entities.Doctor;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 

@@ -1,4 +1,4 @@
-package com.assesment.assesmentsystem.entities;
+package com.assesment.assesmentsystem.data.entities;
 
 import lombok.Data;
 
@@ -11,7 +11,6 @@ public class Disease {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name="disease_id")
     int id;
 
     @Column(name="name")

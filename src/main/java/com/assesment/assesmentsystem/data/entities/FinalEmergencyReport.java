@@ -1,37 +1,31 @@
-package com.assesment.assesmentsystem.entities;
+package com.assesment.assesmentsystem.data.entities;
 
 import com.itextpdf.text.*;
-import com.itextpdf.text.Font;
-import com.itextpdf.text.Rectangle;
 import com.itextpdf.text.pdf.PdfWriter;
-
-import java.awt.*;
 
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.util.ArrayList;
 
-public class Report {
+public class FinalEmergencyReport {
 
     String patientName;
-    Department department;
     int pulse;
     ArrayList<Symptom> mainSymptoms;
     int age;
-    String gender;
+    int gender;
 
-    public Report(String patientName, Department department, int pulse, ArrayList<Symptom> mainSymptoms, int age, String gender) throws FileNotFoundException, DocumentException {
+    public FinalEmergencyReport(String patientName, int pulse, ArrayList<Symptom> mainSymptoms, int age, int gender) throws FileNotFoundException, DocumentException {
         this.patientName = patientName;
-        this.department = department;
         this.pulse = pulse;
         this.mainSymptoms = mainSymptoms;
         this.age = age;
         this.gender = gender;
-        createReport(patientName,department,pulse,mainSymptoms,age,gender);
+        createReport(patientName,pulse,mainSymptoms,age,gender);
     }
 
 
-    void createReport(String patientName ,Department department , int pulse , ArrayList<Symptom> mainSymptoms , int age, String gender) throws FileNotFoundException, DocumentException {
+    void createReport(String patientName  , int pulse , ArrayList<Symptom> mainSymptoms , int age, int gender) throws FileNotFoundException, DocumentException {
 
 
         Rectangle pageSize = new Rectangle(516, 720);
@@ -43,7 +37,7 @@ public class Report {
         document.open();
         Font font = FontFactory.getFont(FontFactory.COURIER, 16, BaseColor.BLACK);
 
-        document.add( new Paragraph( "         " + department.getName() + " Report " ) );
+        document.add( new Paragraph( "         Emergency " + " Report " ) );
         document.add(Chunk.NEWLINE);
         document.add(Chunk.NEWLINE);
         document.add( new Paragraph( "Name of patient : " + patientName ) );
@@ -66,10 +60,5 @@ public class Report {
         document.close();
 
 
-     }
-
-
+    }
 }
-
-
-

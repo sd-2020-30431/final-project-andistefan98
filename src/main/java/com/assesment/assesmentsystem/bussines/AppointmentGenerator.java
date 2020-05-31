@@ -1,9 +1,9 @@
 package com.assesment.assesmentsystem.bussines;
 
-import com.assesment.assesmentsystem.entities.Appointment;
-import com.assesment.assesmentsystem.entities.Department;
+import com.assesment.assesmentsystem.data.entities.Appointment;
+import com.assesment.assesmentsystem.data.entities.Department;
 import org.springframework.beans.factory.annotation.Autowired;
-import com.assesment.assesmentsystem.repositories.AppointmentRepository;
+import com.assesment.assesmentsystem.data.repositories.AppointmentRepository;
 
 import java.time.LocalDate;
 

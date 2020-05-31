@@ -1,4 +1,4 @@
-package com.assesment.assesmentsystem.entities;
+package com.assesment.assesmentsystem.data.entities;
 
 
 import lombok.Data;
@@ -15,11 +15,9 @@ public class Appointment {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     int id;
 
-
     LocalDate dateAppointment;
 
     int patientId;
-
 
     int doctorId;
 

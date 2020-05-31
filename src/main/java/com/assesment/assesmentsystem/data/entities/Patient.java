@@ -1,4 +1,4 @@
-package com.assesment.assesmentsystem.entities;
+package com.assesment.assesmentsystem.data.entities;
 
 import lombok.Data;
 
@@ -12,7 +12,6 @@ public class Patient {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name="patient_id")
     int id;
 
     @Column(name="pulse")
@@ -23,6 +22,9 @@ public class Patient {
 
     @Column(name="last_name")
     String lastName;
+
+    @Column(name="age")
+    int age;
 
     @Column(name="symptom1")
     int mainSymptomId1;
@@ -35,6 +37,9 @@ public class Patient {
 
     @Column(name="gender")
     int gender; //1 for male,  2 female
+
+    @Column(name="departmentId")
+    int departmentId;
 
 
     public Patient(String first, String last, int pulse, ArrayList<Symptom> main , int sym1 , int sym2, int sym3){
@@ -100,5 +105,29 @@ public class Patient {
 
     public void setMainSymptomId3(int mainSymptomId3) {
         this.mainSymptomId3 = mainSymptomId3;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public int getGender() {
+        return gender;
+    }
+
+    public void setGender(int gender) {
+        this.gender = gender;
+    }
+
+    public int getDepartmentId() {
+        return departmentId;
+    }
+
+    public void setDepartmentId(int departmentId) {
+        this.departmentId = departmentId;
     }
 }

@@ -1,9 +1,9 @@
 package com.assesment.assesmentsystem.bussines;
 
-import com.assesment.assesmentsystem.entities.Disease;
-import com.assesment.assesmentsystem.entities.Symptom;
+import com.assesment.assesmentsystem.data.entities.Disease;
+import com.assesment.assesmentsystem.data.entities.Symptom;
 import org.springframework.beans.factory.annotation.Autowired;
-import com.assesment.assesmentsystem.repositories.DiseaseRepository;
+import com.assesment.assesmentsystem.data.repositories.DiseaseRepository;
 
 import java.util.ArrayList;
 import java.util.HashSet;
