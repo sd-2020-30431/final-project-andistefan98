@@ -1,23 +1,26 @@
-package entities;
+package com.assesment.assesmentsystem.entities;
 
+
+import lombok.Data;
 
 import javax.persistence.*;
 import java.util.ArrayList;
 
+@Data
 @Entity
 @Table(name="departments")
 public class Department {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name="department_id")
+
     int id;
 
-
-    @Column(name="name")
     String name;
 
-    @OneToMany(mappedBy="departmentId")
-    ArrayList<Doctor> doctorsList;
+
+
+    //@OneToMany(mappedBy="departmentId")
+   // ArrayList<Doctor> doctorsList;
 
 }

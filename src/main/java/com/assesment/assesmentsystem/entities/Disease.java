@@ -1,7 +1,10 @@
-package entities;
+package com.assesment.assesmentsystem.entities;
+
+import lombok.Data;
 
 import javax.persistence.*;
 
+@Data
 @Entity
 @Table(name="diseases")
 public class Disease {

@@ -1,24 +1,32 @@
-package entities;
+package com.assesment.assesmentsystem.entities;
 
-import javax.persistence.FetchType;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
+import lombok.Data;
 
+import javax.persistence.*;
+
+@Data
+@Entity
+@Table(name="doctors")
 public class Doctor {
 
-   int id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name="id")
+    int id;
 
+    @Column(name="name")
    String name;
 
+    @Column(name="startWorkHour")
    int startWorkHour;
 
+    @Column(name="endWorkHour")
    int endWorkHour;
 
-    @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name="department_id")
-    Department departmentId ;
+    @Column(name="departmentId")
+    int departmentId ;
 
-    public Doctor(String name, int startWorkHour, int endWorkHour, Department departmentId) {
+    public Doctor(String name, int startWorkHour, int endWorkHour, int departmentId) {
         this.name = name;
         this.startWorkHour = startWorkHour;
         this.endWorkHour = endWorkHour;
@@ -55,11 +63,11 @@ public class Doctor {
         this.endWorkHour = endWorkHour;
     }
 
-    public Department getDepartmentId() {
+    public int getDepartmentId() {
         return departmentId;
     }
 
-    public void setDepartmentId(Department departmentId) {
+    public void setDepartmentId(int departmentId) {
         this.departmentId = departmentId;
     }
 }

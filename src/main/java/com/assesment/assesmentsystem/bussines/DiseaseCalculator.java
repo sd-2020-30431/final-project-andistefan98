@@ -1,10 +1,9 @@
-package bussines;
+package com.assesment.assesmentsystem.bussines;
 
-import entities.Disease;
-import entities.Symptom;
-import org.hibernate.mapping.Set;
+import com.assesment.assesmentsystem.entities.Disease;
+import com.assesment.assesmentsystem.entities.Symptom;
 import org.springframework.beans.factory.annotation.Autowired;
-import repositories.DiseaseRepository;
+import com.assesment.assesmentsystem.repositories.DiseaseRepository;
 
 import java.util.ArrayList;
 import java.util.HashSet;

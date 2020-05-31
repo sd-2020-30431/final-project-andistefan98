@@ -1,25 +1,26 @@
-package entities;
+package com.assesment.assesmentsystem.entities;
 
+
+import lombok.Data;
 
 import javax.persistence.*;
 import java.time.LocalDate;
 
+@Data
 @Entity
 @Table(name="appointments")
 public class Appointment {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name="appointment_id")
     int id;
 
-    @Column(name="date")
+
     LocalDate dateAppointment;
 
-    @Column(name="patient_id")
     int patientId;
 
-    @Column(name="doctor_id")
+
     int doctorId;
 
     public Appointment(LocalDate dateAppointment, int patientId, int doctorId) {

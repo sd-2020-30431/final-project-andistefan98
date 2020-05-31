@@ -1,8 +1,11 @@
-package entities;
+package com.assesment.assesmentsystem.entities;
+
+import lombok.Data;
 
 import javax.persistence.*;
 import java.util.ArrayList;
 
+@Data
 @Entity
 @Table(name="patients")
 public class Patient {

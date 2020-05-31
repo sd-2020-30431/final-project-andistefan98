@@ -1,4 +1,4 @@
-package controllers;
+package com.assesment.assesmentsystem.controllers;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -15,6 +15,7 @@ public class PatientController {
         model.addAttribute("user", str);
         return mv;
     }
+
 
     @GetMapping("/fest")
     public String index2(Model model) {
